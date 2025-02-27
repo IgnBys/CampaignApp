@@ -1,6 +1,6 @@
 package com.futurum.technology.CampaignApp.service;
 
-import com.futurum.technology.CampaignApp.entity.Campaign;
+import com.futurum.technology.CampaignApp.model.Campaign;
 import com.futurum.technology.CampaignApp.repository.CampaignRepository;
 import org.springframework.stereotype.Service;
 
