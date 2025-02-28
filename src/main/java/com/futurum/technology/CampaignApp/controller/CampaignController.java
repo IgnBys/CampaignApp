@@ -10,9 +10,9 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/campaigns")
+@CrossOrigin("http://localhost:3000")
 public class CampaignController {
     private final CampaignService campaignService;
-
     public CampaignController(CampaignService campaignService) {
         this.campaignService = campaignService;
     }
@@ -27,7 +27,6 @@ public class CampaignController {
     @ResponseStatus(HttpStatus.OK)
     public Optional<Campaign> getCampaign(@PathVariable Long id){
        return campaignService.getCampaign(id);
-
     }
 
     @PostMapping()

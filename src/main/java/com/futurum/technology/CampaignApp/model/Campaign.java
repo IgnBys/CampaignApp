@@ -3,6 +3,7 @@ package com.futurum.technology.CampaignApp.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Data
@@ -21,10 +22,10 @@ public class Campaign {
     private List<String> keywords;
 
     @Column(nullable = false)
-    private Double bidAmount;
+    private BigDecimal bidAmount;
 
     @Column(nullable = false)
-    private Double campaignFund;
+    private BigDecimal campaignFund;
 
     @Column(nullable = false)
     private Boolean status;
@@ -33,69 +34,6 @@ public class Campaign {
     private String town;
 
     @Column(nullable = false)
-    private Integer radius;
+    private double radius;
 
-//    public Long getId() {
-//        return id;
-//    }
-//
-//    public void setId(Long id) {
-//        this.id = id;
-//    }
-//
-//    public String getCampaignName() {
-//        return campaignName;
-//    }
-//
-//    public void setCampaignName(String campaignName) {
-//        this.campaignName = campaignName;
-//    }
-//
-////    public String getKeywords() {
-////        return keywords;
-////    }
-////
-////    public void setKeywords(String keywords) {
-////        this.keywords = keywords;
-////    }
-//
-//    public Double getBidAmount() {
-//        return bidAmount;
-//    }
-//
-//    public void setBidAmount(Double bidAmount) {
-//        this.bidAmount = bidAmount;
-//    }
-//
-//    public Double getCampaignFund() {
-//        return campaignFund;
-//    }
-//
-//    public void setCampaignFund(Double campaignFund) {
-//        this.campaignFund = campaignFund;
-//    }
-//
-//    public Boolean getStatus() {
-//        return status;
-//    }
-//
-//    public void setStatus(Boolean status) {
-//        this.status = status;
-//    }
-//
-//    public String getTown() {
-//        return town;
-//    }
-//
-//    public void setTown(String town) {
-//        this.town = town;
-//    }
-//
-//    public Integer getRadius() {
-//        return radius;
-//    }
-//
-//    public void setRadius(Integer radius) {
-//        this.radius = radius;
-//    }
 }
