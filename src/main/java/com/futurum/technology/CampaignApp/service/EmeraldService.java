@@ -13,9 +13,9 @@ public class EmeraldService {
     public boolean deductEmeraldBalance(BigDecimal amount) {
         if (emeraldBalance.compareTo(amount) >= 0) {
             emeraldBalance = emeraldBalance.subtract(amount);
-            return true;
+            return false;
         }
-        return false;
+        return true;
     }
 
     public void addEmeraldBalance(BigDecimal amount) {

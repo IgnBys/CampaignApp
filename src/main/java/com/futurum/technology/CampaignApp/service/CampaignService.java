@@ -27,7 +27,7 @@ public class CampaignService {
     }
 
     public Campaign createCampaign(Campaign campaign){
-        if(!emeraldService.deductEmeraldBalance(campaign.getCampaignFund())){
+        if(emeraldService.deductEmeraldBalance(campaign.getCampaignFund())){
             throw new RuntimeException("Insufficient emerald funds.");
         }
         return campaignRepository.save(campaign);
@@ -40,7 +40,7 @@ public class CampaignService {
             BigDecimal newFund = newCampaign.getCampaignFund();
             BigDecimal fundDifference = newFund.subtract(oldFund);
             if (fundDifference.compareTo(BigDecimal.ZERO) > 0) {
-                if (!emeraldService.deductEmeraldBalance(fundDifference)) {
+                if (emeraldService.deductEmeraldBalance(fundDifference)) {
                     throw new RuntimeException("Not enough funds on your Emerald balance!");
                 }
             }
